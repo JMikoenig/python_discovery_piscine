@@ -8,5 +8,8 @@ num2 = int(str_num2)
 print("Thank you!")
 print(f"{str_num1} + {str_num2} = {str(num1 + num2)}")
 print(f"{str_num1} - {str_num2} = {str(num1 - num2)}")
-print(f"{str_num1} / {str_num2} = {str(num1 // num2)}")
+try:
+	print(f"{str_num1} / {str_num2} = {str(num1 // num2)}")
+except ZeroDivisionError:
+	print("Error! Can't divide by zero!");
 print(f"{str_num1} * {str_num2} = {str(num1 * num2)}")
