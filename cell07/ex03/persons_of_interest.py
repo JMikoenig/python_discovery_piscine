@@ -9,12 +9,12 @@ women_scientists = {
 	"grace": { "name": "Grace Hopper", "date_of_birth": "1906" }
 }
 
-scientists_list = [(key, value) for key, value in women_scientists.items()]
-sorted_scientists = sorted(scientists_list, key = lambda x: x[1]['date_of_birth'])
-sorted_women_scientists = dict(sorted_scientists)
 
 def famous_births(people):
-	for woman, attributes in people.items():
+	list = [(key, value) for key, value in women_scientists.items()]
+	sorted_list = sorted(list, key = lambda x: x[1]['date_of_birth'])
+	sorted_dict = dict(sorted_list)
+	for woman, attributes in sorted_dict.items():
 		print(f"{attributes['name']} is a great scientist born in {attributes['date_of_birth']}.")
 
-famous_births(sorted_women_scientists)
+famous_births(women_scientists)
