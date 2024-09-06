@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import sys
+from sys import argv
 
-if len(sys.argv) == 2:
-	print(sys.argv[1].upper())
+if len(argv) == 2:
+	print(argv[1].upper())
 else:
 	print("none")

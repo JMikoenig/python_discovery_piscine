@@ -18,7 +18,10 @@ def average(students):
 	total = 0
 	for student, mark in students.items():
 		total += mark
-	return (total / len(students))
+	try:
+		return (total / len(students))
+	except ZeroDivisionError:
+		print("No students, no average!")
 
 print(f"Average for class 3B: {average(class_3B)}.")
 print(f"Average for class 3C: {average(class_3C)}.")
