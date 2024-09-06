@@ -7,5 +7,5 @@ if len(sys.argv) == 1:
 	exit()
 
 for arg in sys.argv[1:]:
-	if len(arg) >= 3 and arg[-3:] != "ism":
+	if (len(arg) >= 3 and arg[-3:] != "ism") or len(arg) < 3:
 		print(f"{arg}ism")

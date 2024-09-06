@@ -8,6 +8,6 @@ if len(sys.argv) != 3:
 
 num1 = int(sys.argv[1])
 num2 = int(sys.argv[2])
-list = [n for n in range(num1, num2)]
+list = [n for n in range(num1, num2 + 1)]
 
 print(list)
