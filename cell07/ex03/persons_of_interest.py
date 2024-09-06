@@ -9,18 +9,12 @@ women_scientists = {
 	"grace": { "name": "Grace Hopper", "date_of_birth": "1906" }
 }
 
-# Convert the dictionary to a list of tuples
 scientists_list = [(key, value) for key, value in women_scientists.items()]
-
-# Sort the list by date_of_birth using the operator.itemgetter function
-sorted_scientists = sorted(scientists_list, key=lambda x: x[1]['date_of_birth'])
-
-# Convert the sorted list back to a dictionary
+sorted_scientists = sorted(scientists_list, key = lambda x: x[1]['date_of_birth'])
 sorted_women_scientists = dict(sorted_scientists)
 
-
 def famous_births(people):
-	for woman, dictionary in people.items():
-		print(f"{dictionary['name']} is a great scientist born in {dictionary['date_of_birth']}.")
+	for woman, attributes in people.items():
+		print(f"{attributes['name']} is a great scientist born in {attributes['date_of_birth']}.")
 
 famous_births(sorted_women_scientists)
